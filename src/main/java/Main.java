@@ -38,14 +38,14 @@ public class Main {
             String line = null;
             while ((line = in.readLine()) != null) {
                 StringParserRESP parser = new StringParserRESP(line);
-//                if (line.toUpperCase().contains("PING")) {
-//                    writer.write("+PONG\r\n");
-//                    writer.flush();
-//                }
-//                else {
-//                    String writeMe = "$" + line.length() + "\r\n" + line + "\r\n";
-//                    writer.write(writeMe);
-//                }
+                if (line.toUpperCase().contains("PING")) {
+                    writer.write("+PONG\r\n");
+                    writer.flush();
+                }
+                else {
+                    String writeMe = "$" + line.length() + "\r\n" + line + "\r\n";
+                    writer.write(writeMe);
+                }
             }
             System.out.println("closing the outputStram for client--");
         } catch (IOException e) {

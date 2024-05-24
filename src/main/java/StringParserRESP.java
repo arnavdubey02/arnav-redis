@@ -1,6 +1,8 @@
 public class StringParserRESP {
     String stringToBeParsed = null;
-    public void StringParserRESP(String stringToBeParsed) {
+
+    public StringParserRESP(String line) {
         this.stringToBeParsed = stringToBeParsed;
+
     }
 }
