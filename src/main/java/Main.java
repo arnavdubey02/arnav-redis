@@ -37,10 +37,15 @@ public class Main {
                     new InputStreamReader(clientSocket.getInputStream()));
             String line = null;
             while ((line = in.readLine()) != null) {
-                if (line.toUpperCase().contains("PING")) {
-                    writer.write("+PONG\r\n");
-                    writer.flush();
-                }
+                StringParserRESP parser = new StringParserRESP(line);
+//                if (line.toUpperCase().contains("PING")) {
+//                    writer.write("+PONG\r\n");
+//                    writer.flush();
+//                }
+//                else {
+//                    String writeMe = "$" + line.length() + "\r\n" + line + "\r\n";
+//                    writer.write(writeMe);
+//                }
             }
             System.out.println("closing the outputStram for client--");
         } catch (IOException e) {

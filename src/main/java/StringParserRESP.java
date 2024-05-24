@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class StringParserRESP {
+public class StringParserRESP {
+    String stringToBeParsed = null;
+    public void StringParserRESP(String stringToBeParsed) {
+        this.stringToBeParsed = stringToBeParsed;
+    }
 }
