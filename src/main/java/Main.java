@@ -37,7 +37,7 @@ public class Main {
                     new InputStreamReader(clientSocket.getInputStream()));
             String line = null;
             while ((line = in.readLine()) != null) {
-                StringParserRESP parser = new StringParserRESP(line);
+//                StringParserRESP parser = new StringParserRESP(line);
                 if (line.toUpperCase().contains("PING")) {
                     writer.write("+PONG\r\n");
                     writer.flush();
